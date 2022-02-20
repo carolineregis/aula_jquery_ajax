@@ -7,11 +7,12 @@ function consultaCep(){
         type: "GET",
         success: function(response){
             console.log (response);
-             $('#cep').html(response.cep);
-             $('#city').html(response.localidade);
+             $('#title').append(response.cep);
+             $('#localidade').html(response.localidade);
              $('#uf').html(response.uf);
              $('#bairro').html(response.bairro);
              $('#street').html(response.logradouro);
+             $('#complemento').html(response.complemento);
         }
     })
 }
